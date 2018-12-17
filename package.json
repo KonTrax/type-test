@@ -1,5 +1,5 @@
 {
-  "name": "@ktb/test-tools",
+  "name": "@ktb/type-test",
   "description": "Typescript test utilities",
   "version": "0.1.0",
   "author": "KonTrax",
@@ -19,17 +19,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KonTrax/test-tools.git"
+    "url": "git+https://github.com/KonTrax/type-test.git"
   },
   "keywords": [
     "typescript"
   ],
   "bugs": {
-    "url": "https://github.com/KonTrax/test-tools/issues"
+    "url": "https://github.com/KonTrax/type-test/issues"
   },
-  "homepage": "https://github.com/KonTrax/test-tools#readme",
+  "homepage": "https://github.com/KonTrax/type-test#readme",
   "devDependencies": {
     "rimraf": "^2.6.2",
-    "typescript": "^3.3.0-dev.20181214"
+    "typescript": "^3.3.0-dev.20181214",
+    "@ktb/type-compare": "0.1.0"
   }
 }
