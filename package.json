@@ -1,0 +1,35 @@
+{
+  "name": "@ktb/test-tools",
+  "description": "Typescript test utilities",
+  "version": "0.1.0",
+  "author": "KonTrax",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist/",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "preversion": "npm run test",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KonTrax/test-tools.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/KonTrax/test-tools/issues"
+  },
+  "homepage": "https://github.com/KonTrax/test-tools#readme",
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "typescript": "^3.3.0-dev.20181214"
+  }
+}
