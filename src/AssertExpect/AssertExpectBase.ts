@@ -12,26 +12,23 @@ const noop     = () :any => ANY
 
 export const AssertExpectBase :ExpectContext<any> =
 {
-	//#region Raw Value / Type
+	// Raw Value / Type
 
 	type: 'type' as any,
 
-	//#endregion
-	//#region BOL Values
+	// BOL Values
 
 	TRU: 'TRU' as any,
 	FAL: 'FAL' as any,
 	BOL: 'BOL' as any,
 
-	//#endregion
-	//#region BOL Assertions
+	// BOL Assertions
 
 	isTRU: noop,
 	isFAL: noop,
 	isBOL: noop,
 
-	//#endregion
-	//#region Type Assertions
+	// Type Assertions
 
 	isValue:        noop,
 	isSpecial:      noop,
@@ -40,18 +37,14 @@ export const AssertExpectBase :ExpectContext<any> =
 	isUnknown:      noop,
 	isAny:          noop,
 
-	//#endregion
-	//#region Equality
+	// Equality
 
 	equals: noop,
 
-	//#endregion
-	//#region Relation
+	// Relation
 
 	accepts: noop,
 	extends: noop,
-
-	//#endregion
 }
 
 //==============================================================================

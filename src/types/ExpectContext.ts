@@ -23,19 +23,17 @@ import { AssertContext } from './AssertContext'
 
 export interface ExpectContext <A> extends AssertContext
 {
-	//#region Raw Value / Type
+	// Raw Value / Type
 
 	type :A
 
-	//#endregion
-	//#region BOL Values
+	// BOL Values
 
 	TRU :TRU
 	FAL :FAL
 	BOL :BOL
 
-	//#endregion
-	//#region BOL Assertions
+	// BOL Assertions
 
 	isTRU     () :IsTRU<A>
 	isTRU <B> () :IsTRU<B>
@@ -46,8 +44,7 @@ export interface ExpectContext <A> extends AssertContext
 	isBOL     () :IsBOL<A>
 	isBOL <B> () :IsBOL<B>
 
-	//#endregion
-	//#region Type Assertions
+	// Type Assertions
 
 	isValue            () :IsValue        <A>
 	isValue        <B> () :IsValue        <B>
@@ -67,20 +64,16 @@ export interface ExpectContext <A> extends AssertContext
 	isAny              () :IsAny          <A>
 	isAny          <B> () :IsAny          <B>
 
-	//#endregion
-	//#region Equality
+	// Equality
 
 	equals     <B> () :Equals<A, B>
 	equals  <A, B> () :Equals<A, B>
 
-	//#endregion
-	//#region Relation
+	// Relation
 
 	accepts    <B> () :Accepts<A, B>
 	accepts <A, B> () :Accepts<A, B>
 
 	extends    <B> () :Extends<A, B>
 	extends <A, B> () :Extends<A, B>
-
-	//#endregion
 }

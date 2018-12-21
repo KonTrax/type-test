@@ -21,21 +21,19 @@ import {
 
 export interface AssertContext
 {
-	//#region BOL Values
+	// BOL Values
 
 	TRU :TRU
 	FAL :FAL
 	BOL :BOL
 
-	//#endregion
-	//#region BOL Assertions
+	// BOL Assertions
 
 	isTRU <T> () :IsTRU<T>
 	isFAL <T> () :IsFAL<T>
 	isBOL <T> () :IsBOL<T>
 
-	//#endregion
-	//#region Type Assertions
+	// Type Assertions
 
 	isValue        <T> () :IsValue        <T>
 	isSpecial      <T> () :IsSpecial      <T>
@@ -44,16 +42,12 @@ export interface AssertContext
 	isUnknown      <T> () :IsUnknown      <T>
 	isAny          <T> () :IsAny          <T>
 
-	//#endregion
-	//#region Equality
+	// Equality
 
 	equals  <A, B> () :Equals<A, B>
 
-	//#endregion
-	//#region Relation
+	// Relation
 
 	accepts <A, B> () :Accepts<A, B>
 	extends <A, B> () :Extends<A, B>
-
-	//#endregion
 }
