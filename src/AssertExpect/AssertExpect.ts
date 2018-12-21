@@ -16,7 +16,6 @@ export interface AssertExpect extends ExpectFactory, AssertContext {}
 
 export const AssertExpect :AssertExpect =
 	Object.assign<ExpectFactory, ExpectContext<any>>(
-		// (<T> () :Expect<T> => { return AssertExpect as Expect<T> }),
 		function Expect <T> () :Expect<T> { return AssertExpect as Expect<T> },
 		AssertExpectBase
 	)

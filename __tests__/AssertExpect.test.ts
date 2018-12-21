@@ -1,17 +1,7 @@
-// import './helpers'
-
 import * as n_assert from 'assert'
-// import {} from 'util'
-
 import * as TC from '@ktb/type-compare'
-// import * as TT from '@ktb/type-test'
 
 import * as TT from '../'
-// import * as TT from '../src'
-// import AssertExpect from '../src'
-
-// import expect from '@ktb/type-test'
-// import expect from '@ktb/type-test/src/AssertExpect'
 
 //==============================================================================
 //=== Setup ===
