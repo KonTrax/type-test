@@ -1,14 +1,7 @@
-import {
-	// AssertContext,
-	ExpectContext,
-} from '../types'
-
-//==============================================================================
+import { ExpectContext } from '../types'
 
 const ANY :any = null
 const noop     = () :any => ANY
-
-//==============================================================================
 
 export const AssertExpectBase :ExpectContext<any> =
 {
@@ -46,5 +39,3 @@ export const AssertExpectBase :ExpectContext<any> =
 	accepts: noop,
 	extends: noop,
 }
-
-//==============================================================================
