@@ -11,13 +11,17 @@
   ],
   "scripts": {
     "clean": "rimraf dist/",
+    "clean:types": "rimraf dist/types/**/*.js",
     "prebuild": "npm run typecheck && npm run clean",
+    "postbuild": "npm run clean:types",
     "build": "npm run build:ts",
     "build:ts": "tsc",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
     "preversion": "npm run test",
     "prepublishOnly": "npm run build",
-    "test": "tsc -p __tests__/"
+    "test": "npm run test:types && npm run test:code",
+    "test:code": "jest",
+    "test:types": "tsc -p __tests__/"
   },
   "repository": {
     "type": "git",
@@ -30,9 +34,16 @@
     "url": "https://github.com/KonTrax/type-test/issues"
   },
   "homepage": "https://github.com/KonTrax/type-test#readme",
+  "dependencies": {
+    "@ktb/type-compare": "latest"
+  },
   "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.18",
+    "jest": "^23.6.0",
     "rimraf": "^2.6.2",
-    "typescript": "^3.3.0-dev.20181214",
-    "@ktb/type-compare": "0.1.0"
+    "ts-jest": "^23.10.5",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.3.0-dev.20181214"
   }
 }
