@@ -19,7 +19,7 @@ import {
 	Accepts,
 } from './core'
 
-export interface Assert
+export interface AssertContext
 {
 	//#region BOL Values
 

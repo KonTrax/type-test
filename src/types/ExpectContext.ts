@@ -19,9 +19,9 @@ import {
 	Accepts,
 } from './core'
 
-import { Assert } from './Assert'
+import { AssertContext } from './AssertContext'
 
-export interface Expect <A> extends Assert
+export interface ExpectContext <A> extends AssertContext
 {
 	//#region Raw Value / Type
 
