@@ -13,6 +13,7 @@ import {
 	TRU,
 	FAL,
 	BOL,
+	VAL,
 
 	Extends,
 	Equals,
@@ -21,6 +22,30 @@ import {
 
 export interface AssertContext
 {
+	// Special Types
+
+	NEV :never
+	ANY :any
+	UNK :unknown
+
+	// Value Types
+
+	VAL :VAL
+
+	STR :string
+	NUM :number
+	SYM :symbol
+
+	NIL :null | undefined
+	NUL :null
+	UND :undefined
+
+	OBJ :object
+	FUN :Function
+
+	ARR :any[]
+	TUP :[unknown?, ...unknown[]]
+
 	// BOL Values
 
 	TRU :TRU

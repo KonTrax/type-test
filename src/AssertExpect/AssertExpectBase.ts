@@ -9,11 +9,41 @@ export const AssertExpectBase :ExpectContext<any> =
 
 	type: 'type' as any,
 
-	// BOL Values
+	// Special Types
 
+	NEV: 'NEV' as never,
+	ANY: 'ANY' as any,
+	UNK: 'UNK' as any,
+
+	// Value Types
+
+	VAL: 'VAL' as any,
+
+	STR: 'STR' as any,
+	NUM: 'NUM' as any,
+	SYM: 'SYM' as any,
+
+	// Value Types - Boolean
+
+	BOL: 'BOL' as any,
 	TRU: 'TRU' as any,
 	FAL: 'FAL' as any,
-	BOL: 'BOL' as any,
+
+	// Value Types - Empty
+
+	NIL: 'NIL' as any,
+	NUL: 'NUL' as any,
+	UND: 'UND' as any,
+
+	// Value Types - Object
+
+	OBJ: 'OBJ' as any,
+	FUN: 'FUN' as any,
+
+	// Value Types - Array
+
+	ARR: 'ARR' as any,
+	TUP: 'TUP' as any,
 
 	// BOL Assertions
 

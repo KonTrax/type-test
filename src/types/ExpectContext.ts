@@ -25,55 +25,49 @@ export interface ExpectContext <A> extends AssertContext
 {
 	// Raw Value / Type
 
-	type :A
-
-	// BOL Values
-
-	TRU :TRU
-	FAL :FAL
-	BOL :BOL
+	type :A // new
 
 	// BOL Assertions
 
-	isTRU     () :IsTRU<A>
+	isTRU     () :IsTRU<A> // Override
 	isTRU <B> () :IsTRU<B>
 
-	isFAL     () :IsFAL<A>
+	isFAL     () :IsFAL<A> // Override
 	isFAL <B> () :IsFAL<B>
 
-	isBOL     () :IsBOL<A>
+	isBOL     () :IsBOL<A> // Override
 	isBOL <B> () :IsBOL<B>
 
 	// Type Assertions
 
-	isValue            () :IsValue        <A>
+	isValue            () :IsValue        <A> // Override
 	isValue        <B> () :IsValue        <B>
 
-	isSpecial          () :IsSpecial      <A>
+	isSpecial          () :IsSpecial      <A> // Override
 	isSpecial      <B> () :IsSpecial      <B>
 
-	isNever            () :IsNever        <A>
+	isNever            () :IsNever        <A> // Override
 	isNever        <B> () :IsNever        <B>
 
-	isUnknownOrAny     () :IsUnknownOrAny <A>
+	isUnknownOrAny     () :IsUnknownOrAny <A> // Override
 	isUnknownOrAny <B> () :IsUnknownOrAny <B>
 
-	isUnknown          () :IsUnknown      <A>
+	isUnknown          () :IsUnknown      <A> // Override
 	isUnknown      <B> () :IsUnknown      <B>
 
-	isAny              () :IsAny          <A>
+	isAny              () :IsAny          <A> // Override
 	isAny          <B> () :IsAny          <B>
 
 	// Equality
 
-	equals     <B> () :Equals<A, B>
+	equals     <B> () :Equals<A, B> // Override
 	equals  <A, B> () :Equals<A, B>
 
 	// Relation
 
-	accepts    <B> () :Accepts<A, B>
+	accepts    <B> () :Accepts<A, B> // Override
 	accepts <A, B> () :Accepts<A, B>
 
-	extends    <B> () :Extends<A, B>
+	extends    <B> () :Extends<A, B> // Override
 	extends <A, B> () :Extends<A, B>
 }

@@ -4,6 +4,11 @@ export type TRU = true
 export type FAL = false
 export type BOL = TRU | FAL
 
+export type VAL =
+		| object | undefined | null
+		| string | number    | boolean | symbol
+		| bigint
+
 export type IsBOL <T> = Equals<T, BOL>
 export type IsTRU <T> = Equals<T, TRU>
 export type IsFAL <T> = Equals<T, FAL>
