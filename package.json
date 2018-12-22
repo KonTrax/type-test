@@ -17,11 +17,11 @@
     "build": "npm run build:ts",
     "build:ts": "tsc",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
-    "preversion": "npm run test",
+    "preversion": "npm run build && npm run test",
     "prepublishOnly": "npm run build",
     "test": "npm run test:types && npm run test:code",
-    "test:code": "jest",
-    "test:types": "tsc -p __tests__/"
+    "test:types": "tsc -p __tests__/",
+    "test:code": "jest"
   },
   "repository": {
     "type": "git",
