@@ -16,7 +16,8 @@ namespace FIX
 		type :TC.TypeName
 	}
 	export interface ExpectItemString extends ExpectItemBase {
-		type :'string'
+		type   :'string'
+		value ?:string
 	}
 	export interface ExpectItemFunc extends ExpectItemBase {
 		type    :'function'
@@ -28,11 +29,26 @@ namespace FIX
 
 	export const ExpectMap :Record<string, ExpectItem> =
 	{
-		type:           { type: 'string' },
+		type:           { type: 'string',   value: 'type' },
 
-		TRU:            { type: 'string' },
-		FAL:            { type: 'string' },
-		BOL:            { type: 'string' },
+		TRU:            { type: 'string',   value: 'TRU' },
+		FAL:            { type: 'string',   value: 'FAL' },
+		BOL:            { type: 'string',   value: 'BOL' },
+
+		NEV:            { type: 'string',   value: 'NEV' },
+		ANY:            { type: 'string',   value: 'ANY' },
+		UNK:            { type: 'string',   value: 'UNK' },
+		VAL:            { type: 'string',   value: 'VAL' },
+		STR:            { type: 'string',   value: 'STR' },
+		NUM:            { type: 'string',   value: 'NUM' },
+		SYM:            { type: 'string',   value: 'SYM' },
+		NIL:            { type: 'string',   value: 'NIL' },
+		NUL:            { type: 'string',   value: 'NUL' },
+		UND:            { type: 'string',   value: 'UND' },
+		OBJ:            { type: 'string',   value: 'OBJ' },
+		FUN:            { type: 'string',   value: 'FUN' },
+		ARR:            { type: 'string',   value: 'ARR' },
+		TUP:            { type: 'string',   value: 'TUP' },
 
 		isTRU:          { type: 'function', argLen: 0 },
 		isFAL:          { type: 'function', argLen: 0 },
@@ -97,6 +113,13 @@ test('has correct members', () =>
 		{
 			if (typeof expProp.argLen === 'number') {
 				expect(target[key].length).toBe(expProp.argLen)
+			}
+		}
+
+		if (expProp.type === 'string')
+		{
+			if (typeof expProp.value === 'string') {
+				expect(target[key]).toBe(expProp.value)
 			}
 		}
 	}
