@@ -51,6 +51,10 @@ export const AssertExpectBase :ExpectContext<any> =
 	isFAL: noop,
 	isBOL: noop,
 
+	// Type Inspection
+
+	typ: noop,
+
 	// Type Assertions
 
 	isValue:        noop,

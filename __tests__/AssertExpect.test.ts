@@ -50,6 +50,8 @@ namespace FIX
 		ARR:            { type: 'string',   value: 'ARR' },
 		TUP:            { type: 'string',   value: 'TUP' },
 
+		typ:            { type: 'function', argLen: 0 },
+
 		isTRU:          { type: 'function', argLen: 0 },
 		isFAL:          { type: 'function', argLen: 0 },
 		isBOL:          { type: 'function', argLen: 0 },

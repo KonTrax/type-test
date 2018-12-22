@@ -58,6 +58,12 @@ export interface AssertContext
 	isFAL <T> () :IsFAL<T>
 	isBOL <T> () :IsBOL<T>
 
+	// Type Inspection
+
+	typ <T> ()               :T
+	typ <T> (   value  :T)   :T
+	typ <T> (...values :T[]) :T
+
 	// Type Assertions
 
 	isValue        <T> () :IsValue        <T>
