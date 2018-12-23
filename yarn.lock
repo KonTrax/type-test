@@ -18,10 +18,10 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@ktb/type-compare@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@ktb/type-compare/-/type-compare-0.1.1.tgz#3059f81939c2fa35a7aead9556e1fb3c259c8cd3"
-  integrity sha512-JR5vB9H1P10im+BekrLQCc9cmUNxpyxW0NamotQ8As35Ul0fCQvpo0HIx8n/4Ub6E8QbfjfZGN4r3xTeFj7Yxg==
+"@ktb/type-compare@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@ktb/type-compare/-/type-compare-0.1.2.tgz#332bc9950d202c7bfdec255ad6d5a6d75156f4e5"
+  integrity sha512-TqUX7WI3tAG15oloSJF/DemqOHV+annzkl9feHJC63tCuNJM5e5cvVxieF89zqPR/KoV2TFnwJjv5BzaaHtmBg==
 
 "@types/jest@^23.3.10":
   version "23.3.10"
