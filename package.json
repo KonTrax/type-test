@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/KonTrax/type-test#readme",
   "dependencies": {
-    "@ktb/type-compare": "^0.1.0"
+    "@ktb/type-compare": "^0.1.1"
   },
   "devDependencies": {
     "@types/jest": "^23.3.10",
