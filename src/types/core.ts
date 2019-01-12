@@ -9,6 +9,8 @@ export type VAL =
 		| string | number    | boolean | symbol
 		| bigint
 
+export type LIT = [any, ...any[]] | VAL
+
 export type IsBOL <T> = Equals<T, BOL>
 export type IsTRU <T> = Equals<T, TRU>
 export type IsFAL <T> = Equals<T, FAL>
