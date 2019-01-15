@@ -1,7 +1,10 @@
 import { AssertContext, ExpectContext } from '../types'
 import { AssertExpectBase } from './AssertExpectBase'
 
-export interface ExpectFactory { <T> () :Expect<T> }
+export interface ExpectFactory {
+		<T> ()         :Expect<T>
+		<T> (value :T) :Expect<T>
+}
 export interface Expect <T>   extends ExpectFactory, ExpectContext <T> {}
 export interface AssertExpect extends ExpectFactory, AssertContext {}
 

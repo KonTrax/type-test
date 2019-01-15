@@ -248,6 +248,48 @@ test('returns itself (aka recursive singleton)', () =>
 
 //==============================================================================
 
+test('initial factory can be called with type as type argument', () =>
+{
+	const testFN = () => {
+		FAL = TT.AssertExpect<123>().equals<number>()
+		TRU = TT.AssertExpect<123>().equals<123>()
+	}
+	expect(testFN).not.toThrow()
+})
+
+test('initial factory can be called with type as value argument', () =>
+{
+	const testFN = () => {
+		FAL = TT.AssertExpect(123 as 123).equals(111 as number)
+		TRU = TT.AssertExpect(123 as 123).equals(123 as 123)
+	}
+	expect(testFN).not.toThrow()
+})
+
+//==============================================================================
+
+test('instanced can be called with type as type argument', () =>
+{
+	const testFN = () => {
+		const exp = TT.AssertExpect<never>()
+		TRU = exp<123>().equals<123>()
+		FAL = exp<123>().equals<number>()
+	}
+	expect(testFN).not.toThrow()
+})
+
+test('instanced can be called with type as value argument', () =>
+{
+	const testFN = () => {
+		const exp = TT.AssertExpect({} as never)
+		FAL = exp(123 as 123).equals(111 as number)
+		TRU = exp(123 as 123).equals(123 as 123)
+	}
+	expect(testFN).not.toThrow()
+})
+
+//==============================================================================
+
 test('has correct members', () =>
 {
 	const target :Record<keyof TT.AssertExpect, any> = TT.AssertExpect
